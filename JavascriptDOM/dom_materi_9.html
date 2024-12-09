@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulasi Kelas CSS</title>
+    <style>
+        /* Penjelasan: Mendefinisikan gaya untuk kelas 'highlight'
+           Kegunaan: Memberikan latar belakang kuning pada elemen yang memiliki kelas ini */
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <!-- Penjelasan: Elemen paragraf yang akan dimanipulasi
+         Kegunaan: Menampilkan teks yang akan di-highlight -->
+    <p id="paragraf">Ini adalah paragraf.</p>
+    
+    <!-- Penjelasan: Tombol untuk mengaktifkan/menonaktifkan highlight
+         Kegunaan: Memicu fungsi toggleHighlight saat diklik -->
+    <button onclick="toggleHighlight()">Toggle Highlight</button>
+    
+    <script>
+        /* Penjelasan: Fungsi untuk menambah/menghapus kelas 'highlight'
+           Kegunaan: Mengubah tampilan paragraf saat tombol diklik */
+        function toggleHighlight() {
+            const paragraf = document.getElementById('paragraf');
+            paragraf.classList.toggle('highlight');
+        }
+    </script>
+</body>
+</html>

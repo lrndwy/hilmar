@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traversing DOM</title>
+</head>
+<body>
+    <div id="kontainer">
+        <p>Paragraf 1</p>
+        <p>Paragraf 2</p>
+    </div>
+    <button onclick="traverse()">Traverse</button>
+    <script>
+        // Penjelasan: Fungsi ini melakukan traversing DOM
+        // Kegunaan:
+        // 1. Mendemonstrasikan cara mengakses elemen anak pertama dari sebuah container
+        // 2. Menunjukkan penggunaan metode DOM seperti getElementById dan firstElementChild
+        // 3. Memperlihatkan cara mengambil teks dari elemen DOM
+        function traverse() {
+            const kontainer = document.getElementById('kontainer');
+            const paragraf = kontainer.firstElementChild;
+            console.log(paragraf.innerText);
+        }
+    </script>
+</body>
+</html>

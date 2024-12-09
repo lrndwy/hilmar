@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Sederhana</title>
+    <style>
+        .tombol {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5px;
+        }
+        .tombol button {
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" readonly>
+
+    <div class="tombol">
+        <button id="angka1">1</button>
+        <button id="angka2">2</button>
+        <button id="angka3">3</button>
+        <button id="angka4">4</button>
+        <button id="angka5">5</button>
+        <button id="angka6">6</button>
+        <button id="angka7">7</button>
+        <button id="angka8">8</button>
+        <button id="angka9">9</button>
+        <button id="angka0">0</button>
+        <button id="tambah">+</button>
+        <button id="kurang">-</button>
+        <button id="kali">*</button>
+        <button id="bagi">/</button>
+        <button id="hasil">=</button>
+        <button id="ac">AC</button>
+        <button id="del">DEL</button>
+    </div>
+    
+    <script>
+        const buttonAngka1 = document.getElementById("angka1")
+        const buttonAngka2 = document.getElementById("angka2")
+        const buttonAngka3 = document.getElementById("angka3")
+        const buttonAngka4 = document.getElementById("angka4")
+        const buttonAngka5 = document.getElementById("angka5")
+        const buttonAngka6 = document.getElementById("angka6")
+        const buttonAngka7 = document.getElementById("angka7")
+        const buttonAngka8 = document.getElementById("angka8")
+        const buttonAngka9 = document.getElementById("angka9")
+        const buttonAngka0 = document.getElementById("angka0")
+
+        const buttonTambah = document.getElementById("tambah")
+        const buttonKurang = document.getElementById("kurang")
+        const buttonKali = document.getElementById("kali")
+        const buttonBagi = document.getElementById("bagi")
+        const buttonHasil = document.getElementById("hasil")
+        const buttonAc = document.getElementById("ac")
+        const buttonDel = document.getElementById("del")
+
+        const input = document.querySelector("input")
+
+        buttonAngka1.addEventListener("click", function() {
+            input.value += "1"
+        })
+        buttonAngka2.addEventListener("click", function() {
+            input.value += "2"
+        })
+        buttonAngka3.addEventListener("click", function() {
+            input.value += "3"
+        })
+        buttonAngka4.addEventListener("click", function() {
+            input.value += "4"
+        })
+        buttonAngka5.addEventListener("click", function() {
+            input.value += "5"
+        })
+        buttonAngka6.addEventListener("click", function() {
+            input.value += "6"
+        })
+        buttonAngka7.addEventListener("click", function() {
+            input.value += "7"
+        })
+        buttonAngka8.addEventListener("click", function() {
+            input.value += "8"
+        })
+        buttonAngka9.addEventListener("click", function() {
+            input.value += "9"
+        })
+        buttonAngka0.addEventListener("click", function() {
+            input.value += "0"
+        })
+
+        buttonTambah.addEventListener("click", function() {
+            input.value += "+"
+        })
+        buttonKurang.addEventListener("click", function() {
+            input.value += "-"
+        })
+        buttonKali.addEventListener("click", function() {
+            input.value += "*"
+        })
+        buttonBagi.addEventListener("click", function() {
+            input.value += "/"
+        })
+        buttonHasil.addEventListener("click", function() {
+            // Fungsi eval() mengevaluasi string sebagai ekspresi JavaScript
+            // dan mengembalikan hasilnya. Dalam konteks kalkulator,
+            // ini memungkinkan perhitungan string operasi matematika.
+            // Namun, penggunaan eval() dapat berisiko jika input tidak divalidasi.
+            input.value = eval(input.value)
+        })
+        buttonAc.addEventListener("click", function() {
+            input.value = ""
+        })
+        buttonDel.addEventListener("click", function() {
+            input.value = input.value.slice(0, -1)
+        })
+
+    </script>
+</body>
+</html>

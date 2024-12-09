@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menambahkan Elemen Baru</title>
+</head>
+<body>
+    <!-- Daftar yang akan dimanipulasi -->
+    <ul id="daftar">
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+    <!-- Tombol untuk menambah item baru -->
+    <button onclick="tambahItem()">Tambah Item</button>
+    <script>
+        // Fungsi untuk menambahkan item baru ke dalam daftar
+        function tambahItem() {
+            // Mendapatkan referensi ke elemen daftar
+            const daftar = document.getElementById('daftar');
+            // Membuat elemen li baru
+            const itemBaru = document.createElement('li');
+            // Mengatur teks untuk item baru
+            itemBaru.innerText = "Item Baru";
+            // Menambahkan item baru ke dalam daftar
+            daftar.appendChild(itemBaru);
+            // Kegunaan: Mendemonstrasikan manipulasi DOM dinamis
+        }
+    </script>
+</body>
+</html>

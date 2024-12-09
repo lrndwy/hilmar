@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener</title>
+</head>
+<body>
+    <button id="tombol">Klik Saya</button>
+    <script>
+        // Penjelasan: Mengambil referensi elemen tombol dan menambahkan event listener
+        // Kegunaan:
+        // 1. Mendemonstrasikan interaksi dasar antara pengguna dan halaman web
+        // 2. Menunjukkan cara merespons tindakan pengguna dengan JavaScript
+        // 3. Memperkenalkan konsep event handling dalam DOM
+
+        const tombol = document.getElementById('tombol');
+        tombol.addEventListener('click', function() {
+            alert('Tombol diklik!');
+        });
+    </script>
+</body>
+</html>

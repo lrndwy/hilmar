@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form dan Validasi</title>
+</head>
+<body>
+    <!-- Form sederhana dengan satu input dan tombol submit -->
+    <form id="form">
+        <input type="text" id="nama" placeholder="Nama" required>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        // Penjelasan: Mengambil elemen form dan menambahkan event listener
+        // Kegunaan: Menangani submit form dan melakukan validasi
+        const form = document.getElementById('form');
+        form.addEventListener('submit', function(event) {
+            // Mengambil nilai input nama
+            const nama = document.getElementById('nama').value;
+            // Validasi: Memastikan nama tidak kosong
+            if (nama === '') {
+                // Menampilkan pesan error jika nama kosong
+                alert('Nama harus diisi!');
+                // Mencegah form untuk di-submit
+                event.preventDefault();
+            }
+            // Jika validasi berhasil, form akan di-submit secara normal
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menghapus Elemen</title>
+</head>
+<body>
+    <!-- Daftar item yang akan dimanipulasi -->
+    <ul id="daftar">
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+    <!-- Tombol untuk menghapus item -->
+    <button onclick="hapusItem()">Hapus Item</button>
+    <script>
+        // Fungsi untuk menghapus item terakhir dari daftar
+        // Kegunaan: Mendemonstrasikan penghapusan elemen DOM secara dinamis
+        function hapusItem() {
+            // Mendapatkan referensi ke elemen daftar
+            const daftar = document.getElementById('daftar');
+            // Memeriksa apakah daftar memiliki elemen anak
+            if (daftar.lastElementChild) {
+                // Menghapus elemen anak terakhir dari daftar
+                daftar.removeChild(daftar.lastElementChild);
+            }
+        }
+    </script>
+</body>
+</html>

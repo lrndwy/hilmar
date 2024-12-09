@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pertambahan Sederhana</title>
+</head>
+<body>
+    <input type="number" id="angka1">
+    <p>+</p> 
+    <input type="number" id="angka2">
+    <button onclick="tambah()">Tambah</button>
+    <p id="hasil"></p>
+    <script>
+        function tambah() {
+            const angka1 = parseInt(document.getElementById('angka1').value);
+            const angka2 = parseInt(document.getElementById('angka2').value);
+            const hasil = angka1 + angka2;
+            document.getElementById('hasil').innerText = hasil;
+        }
+    </script>
+</body>
+</html>

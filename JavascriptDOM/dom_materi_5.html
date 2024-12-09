@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mengubah Atribut Elemen</title>
+</head>
+<body>
+    <!-- Gambar yang akan diubah atributnya -->
+    <img id="gambar" src="https://via.placeholder.com/150" alt="Placeholder">
+    <!-- Tombol untuk memicu perubahan atribut -->
+    <button onclick="ubahGambar()">Ubah Gambar</button>
+    <script>
+        // Fungsi untuk mengubah atribut src dari gambar
+        // Kegunaan: Mendemonstrasikan cara mengubah atribut elemen HTML menggunakan JavaScript
+        function ubahGambar() {
+            // Mendapatkan referensi ke elemen gambar
+            const gambar = document.getElementById('gambar');
+            // Mengubah nilai atribut src, mengganti ukuran gambar dari 150x150 menjadi 300x300
+            gambar.src = "https://via.placeholder.com/300";
+        }
+    </script>
+</body>
+</html>

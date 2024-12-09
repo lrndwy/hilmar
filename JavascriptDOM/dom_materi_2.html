@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mengubah Konten Elemen</title>
+</head>
+<body>
+    <!-- Elemen paragraf yang akan diubah -->
+    <p id="paragraf">Ini adalah paragraf.</p>
+    <!-- Tombol untuk memicu perubahan konten -->
+    <button onclick="ubahKonten()">Ubah Konten</button>
+    <script>
+        // Fungsi untuk mengubah konten paragraf
+        function ubahKonten() {
+            // Mendapatkan elemen paragraf berdasarkan ID
+            const paragraf = document.getElementById('paragraf');
+            // Mengubah teks dalam paragraf
+            paragraf.innerText = "Konten telah diubah!";
+        }
+        // Kegunaan:
+        // 1. Mendemonstrasikan manipulasi DOM secara dinamis
+        // 2. Menunjukkan cara mengubah konten elemen HTML menggunakan JavaScript
+        // 3. Memberikan contoh interaksi sederhana antara pengguna dan halaman web
+    </script>
+</body>
+</html>

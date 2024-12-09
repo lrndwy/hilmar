@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mengubah Style Elemen</title>
+</head>
+<body>
+    <p id="paragraf">Ini adalah paragraf.</p>
+    <button onclick="ubahWarna()">Ubah Warna</button>
+    <script>
+        // Penjelasan: Fungsi ini mengubah warna teks paragraf menjadi merah
+        // Kegunaan:
+        // 1. Mendemonstrasikan manipulasi style elemen DOM secara dinamis
+        // 2. Menunjukkan cara mengubah properti CSS menggunakan JavaScript
+        // 3. Memberikan contoh interaksi sederhana antara pengguna dan halaman web
+        function ubahWarna() {
+            const paragraf = document.getElementById('paragraf');
+            paragraf.style.color = "red";
+        }
+    </script>
+</body>
+</html>
